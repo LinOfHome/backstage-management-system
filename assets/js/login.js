@@ -66,7 +66,7 @@ $(function () {
 
         $.ajax({
             type: 'POST',
-            url: 'http://ajax.frontend.itheima.net/api/reguser',
+            url: '/api/reguser',
             data,
             success: function (res) {
                 console.log(res);
@@ -83,9 +83,6 @@ $(function () {
                 $('#goToLogin').click();
             }
         })
-
-
-
     })
 
 
@@ -94,7 +91,7 @@ $(function () {
         let data = $(this).serialize();
         $.ajax({
             type: 'POST',
-            url: "http://ajax.frontend.itheima.net/api/login",
+            url: "/api/login",
             data,
             success: function (res) {
                 // console.log(res);
@@ -106,6 +103,8 @@ $(function () {
 
                 // location.href = "/11-大事件/bigmatter/home/index.html";
 
+                // 登录成功
+                localStorage.setItem('token', res.token);
 
                 layer.msg('登录成功,即将跳转首页', {
                     icon: 1,
