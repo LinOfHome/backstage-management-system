@@ -1,0 +1,51 @@
+/*字体头像*/
+.text-avatar{
+    width: 33px;
+    height: 33px;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #419488;
+    line-height: 33px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+    /*默认先让字体头像隐藏*/
+    display: none;
+}
+
+.iconfont{
+    margin-right: 20px;
+}
+.layui-icon{
+    margin: 0 8px 0 15px;
+}
+
+/*侧边栏头像和欢迎语*/
+.userinfo{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.welcome{
+    color: #fff;
+    font-size: 12px;
+    /* 控制用户能否选中文本。除了文本框内，它对被载入为 chrome 的内容没有影响。 */
+    user-select: none;
+}
+
+/* iframe */
+iframe{
+    width: 100%;
+    height: 100%;
+  }
+  .layui-body {
+    overflow: hidden;
+  }
+
+/* 底部 */
+  .layui-footer{
+      text-align: center;
+  }
