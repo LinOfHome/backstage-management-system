@@ -1,8 +1,8 @@
 // ajax的配置 ==> 优化根路径 ==> $.ajaxPrefilter()
 $.ajaxPrefilter(function (options) {
-    console.log(options); //"/my/userinfo"
+    // console.log(options); //"/my/userinfo"
     options.url = "http://ajax.frontend.itheima.net" + options.url;
-    console.log(options); //"http://ajax.frontend.itheima.net/my/userinfo"
+    // console.log(options); //"http://ajax.frontend.itheima.net/my/userinfo"
 
 
     // 处理headers请求头 带上token

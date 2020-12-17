@@ -12,7 +12,7 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token')
         // },
         success: function (res) {
-            console.log(res);
+            // console.log(res);
             // res.status === 0 代表成功
             if (res.status === 0) {
 
@@ -23,7 +23,7 @@ function getUserInfo() {
 
                 // 优先级（nickname和 username）
                 let name = res.data.nickname || res.data.username;
-                $('.welcome').text('欢迎' + name);
+                $('.welcome').text("欢迎" + name);
 
                 // 处理：2选1 需要根据 user_pic 来做判断
                 if (res.data.user_pic) {
@@ -42,7 +42,7 @@ function getUserInfo() {
 
         },
         complete: function (res) {
-            console.log(res);
+            // console.log(res);
             // 通过res的responseJSON 可以获取到服务器响应回来的数据
             let data = res.responseJSON;
             // 请求完成（不论成功还是失败，都会执行），判断
